@@ -1,0 +1,29 @@
+.navbar{
+    height:10vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.navbar a{
+    text-decoration:none;
+}
+.logo{
+    font-size:1.4rem;
+    margin-left:0.5rem;
+    color:rgb(0, 0, 0);
+
+}
+.login{
+    margin-right:0.5rem;
+    font-size:1.4rem;
+    width:3.8rem;
+    height:2rem;
+    color:rgb(255, 255, 255);
+    background-color:rgb(65, 65, 236);
+    border-radius:0.5rem;
+    transition:0.3s all;
+}
+.login:hover{
+    background-color:rgb(255, 255, 255);
+    color:rgb(65, 65, 236);
+}

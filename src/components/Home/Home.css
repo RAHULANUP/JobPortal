@@ -1,0 +1,46 @@
+.home_page{
+    height:90vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.button{
+    margin-top:2rem;
+}
+.getstarted{
+    padding:0.8rem;
+    text-decoration:none;
+    width:5rem;
+    height:2rem;
+    background-color:rgb(65, 65, 236);
+    color:rgb(255, 255, 255);
+    border-radius:0.6rem;
+    transition:0.3s all;
+}
+.getstarted:hover{
+    background-color:rgb(255, 255, 255);
+    color:rgb(65,65,236);
+}
+.home_img{
+    width:25rem;
+    height:25rem;
+}
+
+@media all and (max-width:700px){
+    .home_page{
+        justify-content:center;
+    }
+    
+}
+
+@media all and (max-width:600px){
+    .home_page{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:2rem;
+    }
+   .home_img{
+        display:none;
+   }
+}
