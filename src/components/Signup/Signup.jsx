@@ -1,27 +1,34 @@
 import React from "react";
-import "./Login.css";
+import "./Signup.css";
+
 import { Link } from "react-router-dom";
 
-function Login(){
+function Signup(){
     return(
         <>
             <div className='box'>
-                <div className='login_container'>
+                <div className='signup_container'>
                     <div className='content'>
                         <div>
-                            <h1>LOGIN</h1>
+                            <h1>SignUP</h1>
                         </div>
                         <div>
                             <input type="text" placeholder="Username" />
                         </div>
                         <div>
+                            <input type="text" placeholder="First Name" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Last Name" />
+                        </div>
+                        <div>
                             <input type="password" placeholder="Password" />
                         </div>
                         <div>
-                            <button>LOGIN</button>
+                            <button>SIGN UP</button>
                         </div>
                         <div className="linker">
-                            <Link to='/signup'>CREATE AN ACCOUNT</Link>
+                            <Link to='/login'>ALREADY HAVE AN ACCOUNT?</Link>
                         </div>
                     </div>
                 </div>
@@ -30,4 +37,4 @@ function Login(){
     );
 }
 
-export default Login;
+export default Signup;
