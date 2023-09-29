@@ -45,20 +45,21 @@ input{
 
 .linker{
     text-align:center;
+    color:rgb(255,255,255);
 }
 
 @media all and (max-width:850px){
-    .login_container{
+    .signup_container{
         width:50%;
     }
 }
 @media all and (max-width:715px){
-    .login_container{
+    .signup_container{
         width:60%;
     }
 }
 @media all and (max-width:650px){
-    .login_container{
+    .signup_container{
         width:80%;
     }
 }

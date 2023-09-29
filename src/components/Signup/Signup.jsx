@@ -28,7 +28,7 @@ function Signup(){
                             <button>SIGN UP</button>
                         </div>
                         <div className="linker">
-                            <Link to='/login'>ALREADY HAVE AN ACCOUNT?</Link>
+                            <Link className="linker" to='/login'>ALREADY HAVE AN ACCOUNT?</Link>
                         </div>
                     </div>
                 </div>

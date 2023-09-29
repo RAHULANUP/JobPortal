@@ -21,7 +21,7 @@ function Login(){
                             <button>LOGIN</button>
                         </div>
                         <div className="linker">
-                            <Link to='/signup'>CREATE AN ACCOUNT</Link>
+                            <Link className="linker" to='/signup'>CREATE AN ACCOUNT</Link>
                         </div>
                     </div>
                 </div>
