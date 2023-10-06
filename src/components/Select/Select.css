@@ -1,0 +1,64 @@
+.select__container{
+    height:90vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+div > .recruiter , .seeker{
+    width:35%;
+    height:75%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(255, 255, 255);
+    box-shadow:0px 0px 27px -10px rgba(65,65,236,0.75);
+}
+
+
+
+.select__login{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:30%;
+    height:10%;
+    text-decoration:none;
+    color:rgb(255,255,255);
+    background-color:rgb(65,65,236);
+    border-radius:0.8rem;
+}
+
+@media all and (max-width:950px){
+    div > .recruiter, .seeker{
+        width:40%;
+        height:70%;
+    }
+}
+
+@media all and (max-width:800px){
+    div > .recruiter , .seeker{
+        width:42%;
+        height:65%;
+    }
+}
+@media all and (max-width:750px){
+    div > .recruiter , .seeker{
+        height:60%;
+    }
+}
+
+@media all and (max-width:600px){
+    .select__container{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin-top:1rem;
+    }
+    div > .recruiter , .seeker{
+        margin-top:3rem;
+        width:70%;
+        height:90%;
+    }
+}

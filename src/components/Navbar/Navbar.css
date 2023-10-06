@@ -14,16 +14,40 @@
 
 }
 .login{
-    margin-right:0.5rem;
-    font-size:1.4rem;
-    width:3.8rem;
-    height:2rem;
+    margin-right:1rem;
+    width:9%;
+    height:70%;
     color:rgb(255, 255, 255);
     background-color:rgb(65, 65, 236);
     border-radius:0.5rem;
     transition:0.3s all;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 .login:hover{
     background-color:rgb(255, 255, 255);
     color:rgb(65, 65, 236);
+}
+@media all and (max-width:960px){
+    .login{
+        width:12%;
+    }
+}
+@media all and (max-width:720px){
+    .login{
+        width:15%;
+    }
+
+}
+@media all and (max-width:620px){
+    .login{
+        width:18%;
+    }
+}
+
+@media all and (max-width:485px){
+    .login{
+        width:25%;
+    }
 }

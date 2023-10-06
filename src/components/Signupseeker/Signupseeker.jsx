@@ -1,16 +1,15 @@
 import React from "react";
-import "./Signup.css";
-
+import "./Signupseeker.css";
 import { Link } from "react-router-dom";
 
-function Signup(){
+function Signupseeker(){
     return(
         <>
-            <div className='box'>
+                    <div className='box'>
                 <div className='signup_container'>
                     <div className='content'>
                         <div>
-                            <h1>SignUP</h1>
+                            <h1>JOB SEEKER SignUP</h1>
                         </div>
                         <div>
                             <input type="text" placeholder="Username" />
@@ -28,7 +27,7 @@ function Signup(){
                             <button>SIGN UP</button>
                         </div>
                         <div className="linker">
-                            <Link className="linker" to='/login'>ALREADY HAVE AN ACCOUNT?</Link>
+                            <Link className="linker" to='/loginSeeker'>ALREADY HAVE AN ACCOUNT?</Link>
                         </div>
                     </div>
                 </div>
@@ -37,4 +36,4 @@ function Signup(){
     );
 }
 
-export default Signup;
+export default Signupseeker;

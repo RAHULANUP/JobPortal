@@ -1,15 +1,15 @@
 import React from "react";
-import "./Login.css";
+import "./Loginseeker.css";
 import { Link } from "react-router-dom";
 
-function Login(){
+function Loginseeker(){
     return(
         <>
             <div className='box'>
                 <div className='login_container'>
                     <div className='content'>
                         <div>
-                            <h1>LOGIN</h1>
+                            <h1>JOB SEEKER LOGIN</h1>
                         </div>
                         <div>
                             <input type="text" placeholder="Username" />
@@ -21,7 +21,7 @@ function Login(){
                             <button>LOGIN</button>
                         </div>
                         <div className="linker">
-                            <Link className="linker" to='/signup'>CREATE AN ACCOUNT</Link>
+                            <Link className="linker" to='/signupSeeker'>CREATE AN ACCOUNT</Link>
                         </div>
                     </div>
                 </div>
@@ -30,4 +30,4 @@ function Login(){
     );
 }
 
-export default Login;
+export default Loginseeker;

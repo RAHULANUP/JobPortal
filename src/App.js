@@ -3,8 +3,11 @@ import { Routes,Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
-import Login from "./components/Login/Login";
-import Signup from "./components/Signup/Signup";
+import LoginR from "./components/LoginR/LoginR";
+import Loginseeker from "./components/Loginseeker/Loginseeker";
+import SignupR from "./components/SignupR/SignupR";
+import Signupseeker from "./components/Signupseeker/Signupseeker";
+import Select from "./components/Select/Select";
 
 function App() {
   return (
@@ -12,8 +15,11 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={<Signup/> }/>
+        <Route path='/loginR' element={<LoginR/>} />
+        <Route path='/loginSeeker' element={<Loginseeker/>} />
+        <Route path='/signupR' element={<SignupR/> }/>
+        <Route path='/signupSeeker' element={<Signupseeker/>} />
+        <Route path='/select' element={<Select/>} />
       </Routes>
     </>
   );

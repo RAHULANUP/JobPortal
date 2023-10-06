@@ -8,7 +8,9 @@ function Navbar(){
         <>
             <nav className="navbar">
                 <Link to='/' className='logo'>jobPortal</Link>
-                <Link to='/login' className='login'>Login</Link>
+                <Link to='/select' className='login'>
+                    <div>Get Started</div>
+                </Link>
             </nav>
         </>
     );
