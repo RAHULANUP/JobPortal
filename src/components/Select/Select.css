@@ -12,10 +12,50 @@ div > .recruiter , .seeker{
     justify-content:center;
     align-items:center;
     background-color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
     box-shadow:0px 0px 27px -10px rgba(65,65,236,0.75);
+    transition:0.3s all;
+}
+.recruiter:hover , .seeker:hover{
+    transform:scale(1.03);
+}
+
+.recruiter{
+    background-image:url(../../assets/recruiter.png);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    isolation:isolate;
+    transition:0.3s all;
+
+}
+
+.recruiter::after{
+    content:'';
+    position: absolute;
+    inset:0;
+    z-index:-1;
+    background:rgb(65,65,236);
+    opacity:0.4;
 }
 
 
+.seeker{
+    background-image:url("../../assets/seeker.png");
+    background-size:cover;
+    background-position:center;
+    isolation:isolate;
+    position:relative;
+}
+
+.seeker::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgb(65,65,236);
+    opacity:0.4;
+    z-index:-1;
+}
 
 .select__login{
     display:flex;
@@ -25,8 +65,13 @@ div > .recruiter , .seeker{
     height:10%;
     text-decoration:none;
     color:rgb(255,255,255);
-    background-color:rgb(65,65,236);
+    background-color:rgb(99, 99, 216);
     border-radius:0.8rem;
+    transition:0.3s all;
+}
+.select__login:hover{
+    background-color:rgb(255,255,255);
+    color:rgb(0,0,0);
 }
 
 @media all and (max-width:950px){
