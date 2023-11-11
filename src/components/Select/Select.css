@@ -89,7 +89,7 @@ div > .recruiter , .seeker{
 }
 @media all and (max-width:750px){
     div > .recruiter , .seeker{
-        height:60%;
+        height:45%;
     }
 }
 

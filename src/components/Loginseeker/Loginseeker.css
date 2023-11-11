@@ -8,8 +8,6 @@
 .login_container{
     width:40%;
     height:75%;
-    background-color:rgb(37, 32, 32);
-    color:rgb(255, 255, 255);
     border-radius:2rem;
     display:flex;
     justify-content:center;
@@ -43,7 +41,7 @@ input{
 }
 .linker{
     text-align:center;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
 }
 
 

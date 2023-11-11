@@ -8,7 +8,8 @@ import Loginseeker from "./components/Loginseeker/Loginseeker";
 import SignupR from "./components/SignupR/SignupR";
 import Signupseeker from "./components/Signupseeker/Signupseeker";
 import Select from "./components/Select/Select";
-
+import SuccessR from "./components/SuccessR/SuccessR";
+import SuccessS from "./components/SuccessS/SuccessS";
 function App() {
   return (
     <>
@@ -20,6 +21,8 @@ function App() {
         <Route path='/signupR' element={<SignupR/> }/>
         <Route path='/signupSeeker' element={<Signupseeker/>} />
         <Route path='/select' element={<Select/>} />
+        <Route path='/successR' element={<SuccessR/>} />
+        <Route path='/successSeeker' element={<SuccessS/>} />
       </Routes>
     </>
   );

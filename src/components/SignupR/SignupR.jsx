@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignupR.css";
 
 import { Link } from "react-router-dom";
 
 function Signup(){
+
     return(
         <>
             <div className='box'>
@@ -13,16 +14,13 @@ function Signup(){
                             <h1>RECRUITER SignUP</h1>
                         </div>
                         <div>
-                            <input type="text" placeholder="Username" />
+                            <input type="text" placeholder="Username" name="username" />
                         </div>
                         <div>
-                            <input type="text" placeholder="First Name" />
+                            <input type="email" placeholder="Email" name="email" />
                         </div>
                         <div>
-                            <input type="text" placeholder="Last Name" />
-                        </div>
-                        <div>
-                            <input type="password" placeholder="Password" />
+                            <input type="password" placeholder="Password" name="password" />
                         </div>
                         <div>
                             <button>SIGN UP</button>
