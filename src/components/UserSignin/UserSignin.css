@@ -1,0 +1,17 @@
+.signin__page{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.googlesign{
+    width:50%;
+    height:3rem;
+    border-radius:2rem;
+    border:none;
+    background-color:rgb(65,65,236);
+    color:rgb(255, 255, 255);
+    font-size: 1.5rem;
+    transition:0.3s all;
+}
