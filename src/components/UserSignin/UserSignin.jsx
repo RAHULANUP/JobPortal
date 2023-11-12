@@ -6,7 +6,7 @@ function UserSignin() {
     <>
         <div className="signin__page">
             <button className="googlesign" onClick={signInWithGoogle}>Sign In With Google</button>
-            <h1>Hello ! {localStorage.getItem("name")}</h1>
+            <h1>HI THERE ! {localStorage.getItem("name")}</h1>
         </div>
         
     </>
