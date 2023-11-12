@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Signupseeker(){
     return(
         <>
-                    <div className='box'>
+            <div className='box'>
                 <div className='signup_container'>
                     <div className='content'>
                         <div>
