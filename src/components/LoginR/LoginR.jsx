@@ -9,7 +9,7 @@ function LoginR(){
                 <div className='login_container'>
                     <div className='content'>
                         <div>
-                            <h1>RECRUITER LOGIN</h1>
+                            <h1>Recruiter LOGIN</h1>
                         </div>
                         <div>
                             <input type="text" placeholder="Username" />
