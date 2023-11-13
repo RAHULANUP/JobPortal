@@ -25,7 +25,9 @@ function Signupseeker(){
                         </div>
                         <div>
                             <button>SIGN UP</button>
+                            <Link to="/loginSeeker">goto</Link>
                         </div>
+                        
                         <div className="linker">
                             <Link className="linker" to='/loginSeeker'>ALREADY HAVE AN ACCOUNT?</Link>
                         </div>

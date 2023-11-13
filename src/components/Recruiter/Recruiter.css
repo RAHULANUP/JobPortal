@@ -1,0 +1,51 @@
+.section__recruiter{
+    height:90vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.recruiter__post{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+.recruiter__post>a>button{
+    width:100%;
+    height:2.2rem;
+    margin:1rem;
+    border-radius:2rem;
+    border:none;
+    background-color:rgb(65,65,236);
+    color:rgb(255, 255, 255);
+    transition:0.3s all;
+}
+.recruiter__post>a>button:hover{
+    color:rgb(65,65,236);
+    background-color:rgb(255,255,255);
+}
+.recruiter__job{
+    width:60%;
+}
+.jobs__container{
+
+}
+
+@media all and (max-width:600px){
+    .section__recruiter{
+        height:50vh;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .recruiter__post{
+        width:50%;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        align-items:center;
+
+    }
+}

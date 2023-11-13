@@ -12,13 +12,14 @@ function LoginR(){
                             <h1>Recruiter LOGIN</h1>
                         </div>
                         <div>
-                            <input type="text" placeholder="Username" />
+                            <input type="email" placeholder="Email" />
                         </div>
                         <div>
                             <input type="password" placeholder="Password" />
                         </div>
                         <div>
                             <button>LOGIN</button>
+                            <Link to="/recruiter">goto</Link>
                         </div>
                         <div className="linker">
                             <Link className="linker" to='/signupR'>CREATE AN ACCOUNT</Link>
