@@ -18,7 +18,13 @@ function Postjob() {
                         <input type="text" placeholder='COMPANY' />
                     </div>
                     <div>
+                        <input type="text" placeholder='LOCATION' />
+                    </div>
+                    <div>
                         <input type="text" placeholder='JOB DESCRIPTION' />
+                    </div>
+                    <div>
+                        <input type="text" placeholder='REQUIREMENTS' />
                     </div>
                     <div>
                         <input type="text" placeholder='SALARY' />

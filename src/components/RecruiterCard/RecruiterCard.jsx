@@ -9,7 +9,9 @@ function RecruiterCard() {
             <div>
                 <h1>SDE III</h1>
                 <h2>Google</h2>
+                <h3>San Francisco</h3>
                 <h3>random desc</h3>
+                <h4>B-TECH/B.E</h4>
                 <h2>100000$-120000$</h2>
             </div>
             <div className="del__update">
