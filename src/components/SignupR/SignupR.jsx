@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SignupR.css";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import axios from "axios"; // Import Axios
 
 function Signup() {
@@ -22,8 +22,11 @@ function Signup() {
           type,
         }
       );
-      // Handle success - maybe redirect or show a success message
+      const token = response.data.token;
+      // Save the token to local storage
+      localStorage.setItem("token", token);
       console.log("Response:", response.data);
+      
     } catch (error) {
       // Handle error - show an error message or do something else
       console.error("Error:", error);
