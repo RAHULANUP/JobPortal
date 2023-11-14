@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SignupR.css";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios"; // Import Axios
 
 function Signup() {
@@ -8,6 +9,9 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [type, setType] = useState("recruiter");
+
+  // Access the navigate function
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,8 +29,10 @@ function Signup() {
       const token = response.data.token;
       // Save the token to local storage
       localStorage.setItem("token", token);
-      console.log("Response:", response.data);
-      
+
+      // Use navigate to redirect to /recruiter
+      navigate("/recruiter");
+
     } catch (error) {
       // Handle error - show an error message or do something else
       console.error("Error:", error);
