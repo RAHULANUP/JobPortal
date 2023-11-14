@@ -8,8 +8,6 @@ import Loginseeker from "./components/Loginseeker/Loginseeker";
 import SignupR from "./components/SignupR/SignupR";
 import Signupseeker from "./components/Signupseeker/Signupseeker";
 import Select from "./components/Select/Select";
-import UserSignin from "./components/UserSignin/UserSignin";
-import UserSignup from "./components/UserSignup/UserSignup";
 import Recruiter from "./components/Recruiter/Recruiter";
 import Postjob from "./components/Postjob/Postjob";
 function App() {
@@ -23,8 +21,6 @@ function App() {
         <Route path='/signupR' element={<SignupR/> }/>
         <Route path='/signupSeeker' element={<Signupseeker/>} />
         <Route path='/select' element={<Select/>} />
-        <Route path='/usersignin' element={<UserSignin/>} />
-        <Route path='/usersignup' element={<UserSignup/>} />
         <Route path='/recruiter' element={<Recruiter/>} />
         <Route path='/postjob' element={<Postjob/>} />
       </Routes>
