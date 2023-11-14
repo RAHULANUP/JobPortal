@@ -30,7 +30,7 @@ function Signupseeker() {
             // Save the token to local storage
             localStorage.setItem("token", token);
 
-            // navigate("/recruiter");
+            navigate("/seeker");
 
         } catch (error) {
             // Handle error - show an error message or do something else

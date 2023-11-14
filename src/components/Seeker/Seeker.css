@@ -1,0 +1,9 @@
+.seeker__main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+div>input{
+    width:90%;
+}

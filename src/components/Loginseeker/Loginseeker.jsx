@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Loginseeker.css";
 
-function LoginR() {
+function Loginseeker() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -28,7 +28,7 @@ function LoginR() {
             // Save the token to local storage
             localStorage.setItem("token", token);
 
-            // navigate("/recruiter");
+            navigate("/seeker");
         } catch (error) {
             // Handle error - show an error message or do something else
             console.error("Login Error:", error);
@@ -62,7 +62,7 @@ function LoginR() {
                             </div>
                             <div>
                                 <button type="submit">LOGIN</button>
-                                <Link to="/recruiter">goto</Link>
+                                <Link to="/seeker">goto</Link>
                             </div>
                             <div className="linker">
                                 <Link className="linker" to="/signupSeeker">
@@ -77,4 +77,4 @@ function LoginR() {
     );
 }
 
-export default LoginR;
+export default Loginseeker;
