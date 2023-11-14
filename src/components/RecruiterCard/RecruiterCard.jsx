@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { FiTarget } from "react-icons/fi";
+import { GrUpdate } from "react-icons/gr";
+import { RiDeleteBinLine } from "react-icons/ri";
 function JobList() {
   const [jobData, setJobData] = useState([]);
   const token = localStorage.getItem('token');

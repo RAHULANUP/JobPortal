@@ -110,13 +110,16 @@ function Postjob() {
                             />
                         </div>
                         <div>
-                            <input
-                                type="text"
-                                placeholder="JOB TYPE"
-                                value={type}
-                                onChange={(e) => setType(e.target.value)}
-                            />
+                            <select value={type} onChange={(e) => setType(e.target.value)}>
+                                <option value="">Select Job Type</option>
+                                {['Full-time', 'Part-time', 'Contract', 'Freelance', 'Internship'].map((jobType) => (
+                                    <option key={jobType} value={jobType}>
+                                        {jobType}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
+
                         <div>
                             <input
                                 type="text"
