@@ -1,36 +1,80 @@
-import React from "react";
-import "./Loginseeker.css";
-import {Link} from "react-router-dom";
-function Loginseeker(){
-    return(
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./LoginR.css";
+
+function LoginR() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    // Access the navigate function for programmatic navigation
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            // Send POST request to the server for login
+            const response = await axios.post(
+                "https://dbms-jgsk.onrender.com/api/user/login",
+                {
+                    email,
+                    password,
+                }
+            );
+
+            // Handle success - maybe save the token to local storage or state
+            const token = response.data.token;
+            // Save the token to local storage
+            localStorage.setItem("token", token);
+
+            // navigate("/recruiter");
+        } catch (error) {
+            // Handle error - show an error message or do something else
+            console.error("Login Error:", error);
+        }
+    };
+
+    return (
         <>
-            <form >
-            <div className='box'>
-                <div className='login_container'>
-                    <div className='content'>
-                        <div>
-                            <h1>Job Seeker LOGIN</h1>
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Email" />
-                        </div>
-                        <div>
-                            <input type="password" placeholder="Password" />
-                        </div>
-                        <div>
-                            <button>LOGIN</button>
-                            <Link to="/select">goto</Link>
-                        </div>
-                        
-                        <div className="linker">
-                            <Link className="linker" to='/signupR'>CREATE AN ACCOUNT</Link>
+            <form onSubmit={handleSubmit}>
+                <div className="box">
+                    <div className="login_container">
+                        <div className="content">
+                            <div>
+                                <h1>Recruiter LOGIN</h1>
+                            </div>
+                            <div>
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <button type="submit">LOGIN</button>
+                                <Link to="/recruiter">goto</Link>
+                            </div>
+                            <div className="linker">
+                                <Link className="linker" to="/signupR">
+                                    CREATE AN ACCOUNT
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
         </>
     );
 }
 
-export default Loginseeker;
+export default LoginR;
