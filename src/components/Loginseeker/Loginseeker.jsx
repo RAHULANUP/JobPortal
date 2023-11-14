@@ -42,7 +42,7 @@ function LoginR() {
                     <div className="login_container">
                         <div className="content">
                             <div>
-                                <h1>Recruiter LOGIN</h1>
+                                <h1>JOB SEEKER LOGIN</h1>
                             </div>
                             <div>
                                 <input
@@ -65,7 +65,7 @@ function LoginR() {
                                 <Link to="/recruiter">goto</Link>
                             </div>
                             <div className="linker">
-                                <Link className="linker" to="/signupR">
+                                <Link className="linker" to="/signupSeeker">
                                     CREATE AN ACCOUNT
                                 </Link>
                             </div>

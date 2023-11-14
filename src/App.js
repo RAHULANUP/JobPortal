@@ -10,6 +10,7 @@ import Signupseeker from "./components/Signupseeker/Signupseeker";
 import Select from "./components/Select/Select";
 import Recruiter from "./components/Recruiter/Recruiter";
 import Postjob from "./components/Postjob/Postjob";
+import Updatejob from "./components/Updatejob/Updatejob";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
         <Route path='/select' element={<Select/>} />
         <Route path='/recruiter' element={<Recruiter/>} />
         <Route path='/postjob' element={<Postjob/>} />
+        <Route path='/updatejob' element={<Updatejob/>} />
       </Routes>
     </>
   );

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FiTarget } from "react-icons/fi";
 import { GrUpdate } from "react-icons/gr";
 import { RiDeleteBinLine } from "react-icons/ri";
+import {Link} from "react-router-dom";
 function JobList() {
   const [jobData, setJobData] = useState([]);
   const token = localStorage.getItem('token');
@@ -59,7 +60,7 @@ function JobList() {
             </div>
             <div className='del__update'>
               <button><FiTarget /></button>
-              <button><GrUpdate /></button>
+              <Link to="/updatejob"><button><GrUpdate /></button></Link>
               <button onClick={() => deleteJob(job._id)}><RiDeleteBinLine /></button>
             </div>
           </div>
