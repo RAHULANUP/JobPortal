@@ -15,7 +15,6 @@ function Recruiter() {
             <div className="recruiter__job">
                 <div className="jobs__container">
                     <RecruiterCard />
-                    <RecruiterCard />
                 </div>
             </div>
         </div>
