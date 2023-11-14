@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Postjob.css';
 
@@ -12,9 +12,12 @@ function Postjob() {
     const [skills, setSkills] = useState('');
     const [type, setType] = useState('');
     const [salary, setSalary] = useState('');
+    const navigate = useNavigate();
+
 
     const handleCreateJob = async (e) => {
         e.preventDefault();
+
 
         try {
             // Retrieve the JWT token from localStorage
@@ -42,6 +45,9 @@ function Postjob() {
 
             // Handle success - maybe redirect or show a success message
             console.log('Job Created:', response.data);
+            // Redirect to the job page
+            navigate("/recruiter");
+
 
         } catch (error) {
             // Handle error - show an error message or do something else
