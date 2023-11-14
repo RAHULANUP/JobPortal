@@ -3,10 +3,11 @@ import axios from 'axios';
 
 function JobList() {
   const [jobData, setJobData] = useState([]);
+  const token = localStorage.getItem('token');
+
 
   useEffect(() => {
-    // Make a GET request to your API endpoint
-    axios.get('https://dbms-jgsk.onrender.com/api/list-job/') // Replace with your actual API endpoint
+    axios.get('https://dbms-jgsk.onrender.com/api/list-job/')
       .then(response => {
         setJobData(response.data.data);
         console.log(response.data.data);
@@ -15,15 +16,21 @@ function JobList() {
         console.error('Error fetching job data:', error);
       });
   }, []);
-
+  
   const deleteJob = async (jobId) => {
     try {
-      // Make a DELETE request to your API endpoint with the job ID
-      const response = await axios.delete(`https://dbms-jgsk.onrender.com/api/list-job/delete/${jobId}`); // Replace with your actual DELETE API endpoint
+      const response = await axios.post(
+        `https://dbms-jgsk.onrender.com/api/list-job/delete/${jobId}`,
+        null, 
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
-      // If the deletion was successful, update the job list by filtering out the deleted job
       if (response.status === 200) {
-        setJobData(prevJobData => prevJobData.filter(job => job._id !== jobId));
+        setJobData((prevJobData) => prevJobData.filter((job) => job._id !== jobId));
         console.log(`Job with ID ${jobId} deleted successfully`);
       }
     } catch (error) {
