@@ -9,6 +9,8 @@ function Postjob() {
     const [location, setLocation] = useState('');
     const [jobDescription, setJobDescription] = useState('');
     const [requirements, setRequirements] = useState('');
+    const [skills, setSkills] = useState('');
+    const [type, setType] = useState('');
     const [salary, setSalary] = useState('');
 
     const handleCreateJob = async (e) => {
@@ -22,11 +24,13 @@ function Postjob() {
             const response = await axios.post(
                 'https://dbms-jgsk.onrender.com/api/list-job/create',
                 {
-                    jobTitle,
+                    title: jobTitle,
                     company,
                     location,
-                    jobDescription,
+                    description: jobDescription,
                     requirements,
+                    skills: skills.split(','), // Convert comma-separated string to an array
+                    type,
                     salary,
                 },
                 {
@@ -89,6 +93,22 @@ function Postjob() {
                                 placeholder="REQUIREMENTS"
                                 value={requirements}
                                 onChange={(e) => setRequirements(e.target.value)}
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="SKILLS (comma-separated)"
+                                value={skills}
+                                onChange={(e) => setSkills(e.target.value)}
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="JOB TYPE"
+                                value={type}
+                                onChange={(e) => setType(e.target.value)}
                             />
                         </div>
                         <div>
