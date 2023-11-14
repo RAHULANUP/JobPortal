@@ -60,73 +60,80 @@ function Postjob() {
             <div className="job__main_container">
                 <div className="post__job">
                     <form onSubmit={handleCreateJob}>
-                        <h1>NEW JOB</h1>
+                        <h1>CREATE JOB</h1>
                         <div>
-                            <input
-                                type="text"
-                                placeholder="JOB TITLE"
-                                value={jobTitle}
-                                onChange={(e) => setJobTitle(e.target.value)}
-                            />
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="JOB TITLE"
+                                    value={jobTitle}
+                                    onChange={(e) => setJobTitle(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="COMPANY"
+                                    value={company}
+                                    onChange={(e) => setCompany(e.target.value)}
+                                />
+                            </div>
                         </div>
                         <div>
-                            <input
-                                type="text"
-                                placeholder="COMPANY"
-                                value={company}
-                                onChange={(e) => setCompany(e.target.value)}
-                            />
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="LOCATION"
+                                    value={location}
+                                    onChange={(e) => setLocation(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="JOB DESCRIPTION"
+                                    value={jobDescription}
+                                    onChange={(e) => setJobDescription(e.target.value)}
+                                />
+                            </div>
                         </div>
                         <div>
-                            <input
-                                type="text"
-                                placeholder="LOCATION"
-                                value={location}
-                                onChange={(e) => setLocation(e.target.value)}
-                            />
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="REQUIREMENTS"
+                                    value={requirements}
+                                    onChange={(e) => setRequirements(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="SKILLS ( ',' -separated)"
+                                    value={skills}
+                                    onChange={(e) => setSkills(e.target.value)}
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <input
-                                type="text"
-                                placeholder="JOB DESCRIPTION"
-                                value={jobDescription}
-                                onChange={(e) => setJobDescription(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <input
-                                type="text"
-                                placeholder="REQUIREMENTS"
-                                value={requirements}
-                                onChange={(e) => setRequirements(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <input
-                                type="text"
-                                placeholder="SKILLS (comma-separated)"
-                                value={skills}
-                                onChange={(e) => setSkills(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <select value={type} onChange={(e) => setType(e.target.value)}>
-                                <option value="">Select Job Type</option>
-                                {['Full-time', 'Part-time', 'Contract', 'Freelance', 'Internship'].map((jobType) => (
-                                    <option key={jobType} value={jobType}>
-                                        {jobType}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div>
-                            <input
-                                type="text"
-                                placeholder="SALARY"
-                                value={salary}
-                                onChange={(e) => setSalary(e.target.value)}
-                            />
+                        <div className="with__dropdown">
+                            <div>
+                                <input
+                                    type="text"
+                                    placeholder="SALARY"
+                                    value={salary}
+                                    onChange={(e) => setSalary(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <select className="drop__down" value={type} onChange={(e) => setType(e.target.value)}>
+                                    <option value="">Job Type</option>
+                                    {['Full-time', 'Part-time', 'Contract', 'Freelance', 'Internship'].map((jobType) => (
+                                        <option key={jobType} value={jobType}>
+                                            {jobType}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>
                         <button type="submit">CREATE JOB</button>
                         <Link to="/recruiter">goto</Link>

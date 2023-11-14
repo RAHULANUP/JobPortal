@@ -1,16 +1,28 @@
 .job__main_container{
+    width:100%;
     height:90vh;
     display:flex;
     justify-content:center;
     align-items:center;
 }
-.post__job>form>div>input{
-    border-bottom:1px solid rgb(0, 0, 0);
+.post__job>form>div>div>input{
     margin-bottom:1rem;
+    border:0.3px solid rgb(65,65,236);
+    width:100%;
+    height:2rem;
+    font-size:1.2rem;
+    border-radius:0.8rem;
+    padding:1rem;
+}
+.post__job>form>div{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
 }
 .post__job>form>h1{
     text-align:center;
-    margin-bottom:1rem;
+    margin-bottom:2rem;
+
 }
 .post__job>form>button{
     width:100%;
@@ -24,4 +36,18 @@
 .post__job>form>button:hover{
     color:rgb(65,65,236);
     background-color:rgb(255,255,255);
+}
+.post__job>form>div>div>.drop__down{
+    width:100%;
+    height:2rem;
+    font-size:1.2rem;
+    border-radius:0.8rem;
+    margin-right:7.8rem;
+    margin-bottom:1rem;
+
+}
+.post__job>form>div>.with__dropdown{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
 }
