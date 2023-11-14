@@ -1,7 +1,8 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import homesvg from "../../assets/homesvg.svg";
+import Lottie from "lottie-react";
+import homeanimation from "../../assets/home_animation.json";
 function Home(){
     return(
         <>
@@ -14,7 +15,7 @@ function Home(){
                     </div>
                 </div>
                 <div>
-                    <img className='home_img' src={homesvg} alt='homeimage'/>
+                    <Lottie className="home_right" animationData={homeanimation} />
                 </div>
             </div>
         </>
