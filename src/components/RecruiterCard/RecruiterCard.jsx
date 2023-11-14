@@ -7,7 +7,11 @@ function JobList() {
 
 
   useEffect(() => {
-    axios.get('https://dbms-jgsk.onrender.com/api/list-job/')
+    axios.get('https://dbms-jgsk.onrender.com/api/list-job/', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
       .then(response => {
         setJobData(response.data.data);
         console.log(response.data.data);
@@ -15,13 +19,14 @@ function JobList() {
       .catch(error => {
         console.error('Error fetching job data:', error);
       });
-  }, []);
-  
+  }, [token]);
+
+
   const deleteJob = async (jobId) => {
     try {
       const response = await axios.post(
         `https://dbms-jgsk.onrender.com/api/list-job/delete/${jobId}`,
-        null, 
+        null,
         {
           headers: {
             Authorization: `Bearer ${token}`,
