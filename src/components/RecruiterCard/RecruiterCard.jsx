@@ -49,15 +49,18 @@ function JobList() {
       {jobData.length > 0 ? (
         <ul>
           {jobData.map(job => (
-            <li key={job._id}>
+            <div className="card__container" key={job._id}>
+            <div>
               <h2>{job.title}</h2>
               <p>{job.company} - {job.location}</p>
               <p>{job.description}</p>
-              <div>
-                <button onClick={() => deleteJob(job._id)}>Delete</button>
-                <button>Update</button>
-              </div>
-            </li>
+            </div>
+            <div className='del__update'>
+              <button><FiTarget /></button>
+              <button><GrUpdate /></button>
+              <button onClick={() => deleteJob(job._id)}><RiDeleteBinLine /></button>
+            </div>
+          </div>
           ))}
         </ul>
       ) : (
