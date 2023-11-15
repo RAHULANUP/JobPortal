@@ -6,8 +6,14 @@ function Seeker() {
   return (
     <>
         <div className='seeker__main'>
+          <div className='seeker__left'>
             <input type="text" placeholder='Search job' value={search} onChange={(e)=>setSearch(e.target.value)}/>
             <SeekerCard search={search}/>
+          </div>
+          <div className="seeker__right">
+            <h3>JOBS YOU HAVE APPLIED TO</h3>
+            
+          </div>
         </div>
     </>
   )

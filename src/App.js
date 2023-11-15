@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes,Route } from "react-router-dom";
 
+
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import LoginR from "./components/LoginR/LoginR";
@@ -15,6 +16,7 @@ import Updatejob from "./components/Updatejob/Updatejob";
 function App() {
   return (
     <>
+
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
@@ -28,6 +30,7 @@ function App() {
         <Route path='/postjob' element={<Postjob/>} />
         <Route path='/updatejob/:jobId' element={<Updatejob/>} />
       </Routes>
+
     </>
   );
 }
