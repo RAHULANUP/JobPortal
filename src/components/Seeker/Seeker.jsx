@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import "./Seeker.css";
 import SeekerCard from "../SeekerCard/SeekerCard";
+import AppliedCard from '../AppliedCard/AppliedCard';
 function Seeker() {
   const [search,setSearch] = useState('');
   return (
@@ -12,6 +13,7 @@ function Seeker() {
           </div>
           <div className="seeker__right">
             <h3>JOBS YOU HAVE APPLIED TO</h3>
+            <AppliedCard  />
             
           </div>
         </div>
