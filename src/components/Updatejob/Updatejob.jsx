@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import './Updatejob.css';
 
 function Updatejob() {
+    const { jobId } = useParams();
     const [jobTitle, setJobTitle] = useState('');
     const [company, setCompany] = useState('');
     const [location, setLocation] = useState('');
@@ -14,18 +15,43 @@ function Updatejob() {
     const [salary, setSalary] = useState('');
     const navigate = useNavigate();
 
+    useEffect(() => {
+        // Fetch job details using the jobId and populate the form
+        const fetchJobDetails = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`http://localhost:5000/api/list-job/${jobId}`, {
+                    headers: { Authorization: `Bearer ${token}` },
+                });
+                const jobDetails = response.data.data;
+
+                // Set the state with the retrieved job details
+                setJobTitle(jobDetails.title);
+                setCompany(jobDetails.company);
+                setLocation(jobDetails.location);
+                setJobDescription(jobDetails.description);
+                setRequirements(jobDetails.requirements);
+                setSkills(jobDetails.skills.join(',')); // Convert array to comma-separated string
+                setType(jobDetails.type);
+                setSalary(jobDetails.salary);
+            } catch (error) {
+                console.error('Error fetching job details:', error);
+            }
+        };
+
+        fetchJobDetails();
+    }, [jobId]);
 
     const handleUpdateJob = async (e) => {
         e.preventDefault();
-
 
         try {
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem('token');
 
-            // Send POST request to your API endpoint with the job details and headers
+            // Send POST request to update the job
             const response = await axios.post(
-                'http://localhost:5000/api/list-job/create',
+                `http://localhost:5000/api/list-job/edit/${jobId}`,
                 {
                     title: jobTitle,
                     company,
@@ -44,14 +70,12 @@ function Updatejob() {
             );
 
             // Handle success - maybe redirect or show a success message
-            console.log('Job Created:', response.data);
+            console.log('Job Updated:', response.data);
             // Redirect to the job page
             navigate("/recruiter");
-
-
         } catch (error) {
             // Handle error - show an error message or do something else
-            console.error('Error creating job:', error);
+            console.error('Error updating job:', error);
         }
     };
 
@@ -125,7 +149,11 @@ function Updatejob() {
                                 />
                             </div>
                             <div>
-                                <select className="drop__down" value={type} onChange={(e) => setType(e.target.value)}>
+                                <select
+                                    className="drop__down"
+                                    value={type}
+                                    onChange={(e) => setType(e.target.value)}
+                                >
                                     <option value="">Job Type</option>
                                     {['Full-time', 'Part-time', 'Contract', 'Freelance', 'Internship'].map((jobType) => (
                                         <option key={jobType} value={jobType}>
@@ -135,8 +163,8 @@ function Updatejob() {
                                 </select>
                             </div>
                         </div>
-                        <button type="submit">UPDATE JOB</button>
-                        <Link to="/recruiter">goto</Link>
+                        <button type="submit" onClick={handleUpdateJob}>UPDATE JOB</button>
+                        <Link to="/recruiter">Go to Recruiter</Link>
                     </form>
                 </div>
             </div>

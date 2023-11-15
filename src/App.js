@@ -26,7 +26,7 @@ function App() {
         <Route path='/recruiter' element={<Recruiter/>} />
         <Route path='/seeker' element={<Seeker/>} />
         <Route path='/postjob' element={<Postjob/>} />
-        <Route path='/updatejob' element={<Updatejob/>} />
+        <Route path='/updatejob/:jobId' element={<Updatejob/>} />
       </Routes>
     </>
   );

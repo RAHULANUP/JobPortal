@@ -60,7 +60,7 @@ function JobList() {
             </div>
             <div className='del__update'>
               <button><FiTarget /></button>
-              <Link to="/updatejob"><button><GrUpdate /></button></Link>
+              <Link to={`/updatejob/${job._id}`}><button><GrUpdate /></button></Link>
               <button onClick={() => deleteJob(job._id)}><RiDeleteBinLine /></button>
             </div>
           </div>
