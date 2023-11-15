@@ -8,7 +8,7 @@ function SeekerCard({search}) {
   
   
     useEffect(() => {
-      axios.get('https://dbms-jgsk.onrender.com/api/list-job/', {
+      axios.get('http://localhost:5000/api/list-job/', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

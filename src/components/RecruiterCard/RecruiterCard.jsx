@@ -10,7 +10,7 @@ function JobList() {
 
 
   useEffect(() => {
-    axios.get('https://dbms-jgsk.onrender.com/api/list-job/', {
+    axios.get('http://localhost:5000/api/list-job/', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -28,7 +28,7 @@ function JobList() {
   const deleteJob = async (jobId) => {
     try {
       const response = await axios.post(
-        `https://dbms-jgsk.onrender.com/api/list-job/delete/${jobId}`,
+        `http://localhost:5000/api/list-job/delete/${jobId}`,
         null,
         {
           headers: {

@@ -25,7 +25,7 @@ function Updatejob() {
 
             // Send POST request to your API endpoint with the job details and headers
             const response = await axios.post(
-                'https://dbms-jgsk.onrender.com/api/list-job/create',
+                'http://localhost:5000/api/list-job/create',
                 {
                     title: jobTitle,
                     company,

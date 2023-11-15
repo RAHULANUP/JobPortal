@@ -1,9 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Navbar.css";
 
 import { Link } from "react-router-dom";
 
 function Navbar(){
+    const [flag, setFlag]=useState(false);
     return(
         <>
             <nav className="navbar">
