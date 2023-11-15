@@ -32,7 +32,8 @@ function App() {
         <Route path='/postjob' element={<Postjob/>} />
         <Route path='/updatejob/:jobId' element={<Updatejob/>} />
         <Route path='/apply-job/:jobId' element={<Applyjob/>} />
-        <Route path="/viewapplicants" element={<ViewApplicants/>} />
+        <Route path="/viewapplicants/:jobId" element={<ViewApplicants/>} />
+      
       </Routes>
 
     </>
