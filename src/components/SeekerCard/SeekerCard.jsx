@@ -47,4 +47,4 @@ function SeekerCard({search}) {
   )
 }
 
-export default SeekerCard
+export default SeekerCard;
