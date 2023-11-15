@@ -3,16 +3,22 @@
     justify-content:center;
 }
 div>input{
+    margin:1.5rem 0;
+
     width:100%;
+}
+div>h1{
+    margin-bottom:1.5rem
 }
 .seeker__left{
     flex:4;
+    margin-left:3rem;
 }
 .seeker__right{
     flex:1;
     height:70vh;
     color:rgb(255, 255, 255);
-    background-color:rgb(59, 53, 53);
+    background-color:rgb(57, 57, 156);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
 }

@@ -13,6 +13,7 @@ import Recruiter from "./components/Recruiter/Recruiter";
 import Seeker from "./components/Seeker/Seeker";
 import Postjob from "./components/Postjob/Postjob";
 import Updatejob from "./components/Updatejob/Updatejob";
+import Applyjob from "./components/Applyjob/Applyjob";
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
         <Route path='/seeker' element={<Seeker/>} />
         <Route path='/postjob' element={<Postjob/>} />
         <Route path='/updatejob/:jobId' element={<Updatejob/>} />
+        <Route path='/apply-job/:jobId' element={<Applyjob/>} />
       </Routes>
 
     </>

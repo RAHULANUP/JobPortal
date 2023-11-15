@@ -1,6 +1,7 @@
 import React,{ useState , useEffect } from  "react";
 import "./SeekerCard.css";
 import axios from "axios";
+import {Link} from  "react-router-dom";
 function SeekerCard({search}) {
     const [jobData, setJobData] = useState([]);
     
@@ -34,7 +35,7 @@ function SeekerCard({search}) {
               <p>{job.description}</p>
             </div>
             <div className='apply'>
-                <button>Easy Apply</button>
+                <Link to={`/apply-job/${job._id}`}><button>Easy Apply</button></Link> 
             </div>
           </div>
           ))}
