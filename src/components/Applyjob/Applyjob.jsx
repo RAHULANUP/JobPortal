@@ -9,39 +9,12 @@ function Applyjob() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [location, setLocation] = useState('');
-    const [qualification, setQualification] = useState('');
+    const [qualifications, setQualifications] = useState('');
     const [skills, setSkills] = useState('');
     const [experience, setExperience] = useState('');
     const [salary, setSalary] = useState('');
     const navigate = useNavigate();
 
-
-    useEffect(() => {
-        // Fetch job details using the jobId and populate the form
-        const postApply = async () => {
-            try {
-                const token = localStorage.getItem('token');
-                const response = await axios.post(`http://localhost:5000/api/apply-job/${jobId}`, {
-                    headers: { Authorization: `Bearer ${token}` },
-                });
-                const jobDetails = response.data.data;
-
-                // Set the state with the retrieved job details
-                setName(jobDetails.name);
-                setEmail(jobDetails.email);
-                setPhone(jobDetails.phone);
-                setLocation(jobDetails.location);
-                setQualification(jobDetails.qualification);
-                setSkills(jobDetails.skills.join(',')); // Convert array to comma-separated string
-                setExperience(jobDetails.experience);
-                setSalary(jobDetails.salary);
-            } catch (error) {
-                console.error('Error fetching job details:', error);
-            }
-        };
-
-        postApply();
-    }, [jobId]);
 
     const handleApplyJob = async (e) => {
         e.preventDefault();
@@ -49,13 +22,13 @@ function Applyjob() {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                'http://localhost:5000/api/apply-job', // Endpoint for applying to a job
+                `http://localhost:5000/api/seeker/apply-job/${jobId}`, // Endpoint for applying to a job
                 {
                     name,
                     email,
                     phone,
                     location,
-                    qualification,
+                    qualifications,
                     skills: skills.split(','), // Convert skills to an array
                     experience,
                     salary,
@@ -69,7 +42,7 @@ function Applyjob() {
     
             // Handle success - maybe redirect or show a success message
             console.log('Job Application Successful:', response.data);
-            navigate("/recruiter"); // Redirect after applying
+            navigate("/seeker"); // Redirect after applying
         } catch (error) {
             // Handle error - show an error message or do something else
             console.error('Error applying to job:', error);
@@ -124,8 +97,8 @@ function Applyjob() {
                                 <input
                                     type="text"
                                     placeholder="QUALIFICATION"
-                                    value={qualification}
-                                    onChange={(e) => setQualification(e.target.value)}
+                                    value={qualifications}
+                                    onChange={(e) => setQualifications(e.target.value)}
                                 />
                             </div>
                             <div>
