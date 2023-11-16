@@ -46,7 +46,7 @@ function Signup() {
           <div className="signup_container">
             <div className="content">
               <div>
-                <h1>RECRUITER SignUP</h1>
+                <h1>Recruiter SIGNUP</h1>
               </div>
               <div>
                 <input
@@ -76,8 +76,7 @@ function Signup() {
                 />
               </div>
               <div>
-                <input type="submit" value="SIGN UP" />
-                <Link to="/loginR">goto</Link>
+                <input className="button" type="submit" value="SIGN UP" />
               </div>
 
               <div className="linker">

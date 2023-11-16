@@ -44,7 +44,7 @@ function Signupseeker() {
                 <div className="signup_container">
                     <div className="content">
                         <div>
-                            <h1>JOB SEEKER SignUP</h1>
+                            <h1>Job Seeker SIGNUP</h1>
                         </div>
                         <form onSubmit={handleSubmit}>
                             <div>
@@ -73,7 +73,6 @@ function Signupseeker() {
                             </div>
                             <div>
                                 <button type="submit">SIGN UP</button>
-                                <Link to="/loginSeeker">goto</Link>
                             </div>
 
                             <div className="linker">

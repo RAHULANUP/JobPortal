@@ -164,7 +164,6 @@ function Updatejob() {
                             </div>
                         </div>
                         <button type="submit" onClick={handleUpdateJob}>UPDATE JOB</button>
-                        <Link to="/recruiter">Go to Recruiter</Link>
                     </form>
                 </div>
             </div>

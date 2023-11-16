@@ -63,7 +63,6 @@ function LoginR() {
                             </div>
                             <div>
                                 <button type="submit">LOGIN</button>
-                                <Link to="/recruiter">goto</Link>
                             </div>
                             <div className="linker">
                                 <Link className="linker" to="/signupR">

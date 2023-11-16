@@ -42,7 +42,7 @@ function Loginseeker() {
                     <div className="login_container">
                         <div className="content">
                             <div>
-                                <h1>JOB SEEKER LOGIN</h1>
+                                <h1>Job Seeker LOGIN</h1>
                             </div>
                             <div>
                                 <input
@@ -62,7 +62,6 @@ function Loginseeker() {
                             </div>
                             <div>
                                 <button type="submit">LOGIN</button>
-                                <Link to="/seeker">goto</Link>
                             </div>
                             <div className="linker">
                                 <Link className="linker" to="/signupSeeker">

@@ -136,7 +136,6 @@ function Postjob() {
                             </div>
                         </div>
                         <button type="submit">CREATE JOB</button>
-                        <Link to="/recruiter">goto</Link>
                     </form>
                 </div>
             </div>

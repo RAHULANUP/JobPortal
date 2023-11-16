@@ -129,7 +129,6 @@ function Applyjob() {
                             </div>
                         </div>
                         <button type="submit">APPLY JOB</button>
-                        <Link to="/recruiter">goto</Link>
                     </form>
                 </div>
             </div>

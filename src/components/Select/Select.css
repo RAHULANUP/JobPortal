@@ -21,7 +21,7 @@ div > .recruiter , .seeker{
 }
 
 .recruiter{
-    background-image:url(../../assets/recruiter.png);
+    background-image:url(../../assets/recruiter.svg);
     background-position:center;
     background-size:cover;
     position:relative;
@@ -35,13 +35,13 @@ div > .recruiter , .seeker{
     position: absolute;
     inset:0;
     z-index:-1;
-    background:rgb(65,65,236);
+    background:rgb(44, 44, 149);
     opacity:0.4;
 }
 
 
 .seeker{
-    background-image:url("../../assets/seeker.png");
+    background-image:url("../../assets/seeker.svg");
     background-size:cover;
     background-position:center;
     isolation:isolate;
@@ -52,7 +52,7 @@ div > .recruiter , .seeker{
     content:'';
     position:absolute;
     inset:0;
-    background:rgb(65,65,236);
+    background:rgb(44,44,149);
     opacity:0.4;
     z-index:-1;
 }

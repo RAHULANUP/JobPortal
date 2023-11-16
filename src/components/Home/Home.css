@@ -3,6 +3,7 @@
     display:flex;
     justify-content:space-around;
     align-items:center;
+    font-size:1.5rem;
 }
 
 .button{
@@ -23,8 +24,8 @@
     color:rgb(65,65,236);
 }
 .home_right{
-    width:25rem;
-    height:25rem;
+    width:35rem;
+    height:30rem;
 }
 
 @media all and (max-width:700px){

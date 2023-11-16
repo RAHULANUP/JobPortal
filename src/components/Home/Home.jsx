@@ -9,7 +9,7 @@ function Home(){
             <div className='home_page'>
                 <div>
                     <h1>FIND YOUR DREAM JOB </h1>
-                    <h1>HERE</h1>
+                    <h1>FASTER</h1>
                     <div className='button'>
                         <Link to='/select' className='getstarted'>GET STARTED</Link>
                     </div>

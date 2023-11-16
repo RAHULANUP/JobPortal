@@ -30,6 +30,19 @@ button:hover{
     color:rgb(65,65,236);
     background-color:rgb(255,255,255);
 }
+.box>.signup_container>.content>div>.button{
+    width:100%;
+    height:2.2rem;
+    border-radius:2rem;
+    border:none;
+    background-color:rgb(65,65,236);
+    color:rgb(255, 255, 255);
+    transition:0.3s all;
+}
+.box>.signup_container>.content>div>.button:hover{
+    color:rgb(65,65,236);
+    background-color:rgb(255,255,255);
+}
 input{
     border:none;
     width:100%;
