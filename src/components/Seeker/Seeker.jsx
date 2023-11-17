@@ -12,7 +12,7 @@ function Seeker() {
             <SeekerCard search={search}/>
           </div>
           <div className="seeker__right">
-            <h3>JOBS YOU HAVE APPLIED TO</h3>
+            <h3>YOU HAVE APPLIED TO</h3>
             <AppliedCard/>
           </div>
         </div>

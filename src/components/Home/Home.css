@@ -27,7 +27,15 @@
     width:35rem;
     height:30rem;
 }
-
+@media all and (max-width:740px){
+    .home_page{
+        font-size:1rem;
+    }
+    .home_right{
+        width:25rem;
+        height:20rem;
+    }
+}
 @media all and (max-width:700px){
     .home_page{
         justify-content:center;

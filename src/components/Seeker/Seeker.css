@@ -2,24 +2,30 @@
     display:flex;
     justify-content:center;
 }
-div>input{
+.seeker__main>.seeker__left>input{
     margin:1.5rem 0;
-
     width:90%;
 }
 div>h1{
     margin-bottom:1.5rem
 }
+.seeker__left::-webkit-scrollbar{
+    width:0;
+}
 .seeker__left{
     flex:2;
     margin-left:3rem;
+    height:85vh;
+    overflow-y:scroll;
 }
+
 .seeker__right{
     flex:1;
-    margin-top:1rem;
+    margin-top:5rem;
     padding-left:1rem;
+    overflow-y:scroll;
     height:70vh;
     color:rgb(0, 0, 0);
     background-color:rgb(255, 255, 255);
-    border-left:1px solid rgb(0, 0, 0);
+    border-left:5px solid rgb(0, 0, 0);
 }

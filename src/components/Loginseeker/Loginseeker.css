@@ -19,6 +19,13 @@
 .content div{
     margin-bottom:1rem;
 }
+form>.box>.login_container>.content>div>input{
+    border:1.5px solid rgb(168, 165, 165);
+    width:100%;
+    height:2rem;
+    font-size:1.2rem;
+    border-radius:0.8rem;
+}
 button{
     width:100%;
     height:2.2rem;

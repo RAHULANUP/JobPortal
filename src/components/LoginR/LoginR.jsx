@@ -9,7 +9,7 @@ function LoginR() {
 
     // Access the navigate function for programmatic navigation
     const navigate = useNavigate();
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -27,7 +27,7 @@ function LoginR() {
             const token = response.data.token;
             // Save the token to local storage
             localStorage.setItem("token", token);
-
+            
             // Use navigate to redirect to /recruiter
             navigate("/recruiter");
         } catch (error) {
