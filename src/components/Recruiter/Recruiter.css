@@ -34,9 +34,9 @@
 }
 .recruiter__job{
     width:60%;
+    height:90vh;
+    overflow-y:scroll;
 }
-
-
 
 @media all and (max-width:600px){
     .section__recruiter{
