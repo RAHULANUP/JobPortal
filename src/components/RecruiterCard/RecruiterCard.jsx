@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./RecruiterCard.css";
 import axios from 'axios';
 import { FiTarget } from "react-icons/fi";
 import { GrUpdate } from "react-icons/gr";

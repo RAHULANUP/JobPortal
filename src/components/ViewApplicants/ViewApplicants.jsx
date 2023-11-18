@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./ViewApplicants.css";
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -27,28 +28,30 @@ function ViewApplicants() {
 
     return (
         <>
-            <h1>JOB APPLICANTS</h1>
-            <div>
-                {applicantsData.length > 0 ? (
-                    <ul>
-                        {applicantsData.map(applicant => (
-                            <div className="card__container" key={applicant._id}>
-                                <div>
-                                    <h2>{applicant.name}</h2>
-                                    <p>Email: {applicant.email}</p>
-                                    <p>Phone: {applicant.phone}</p>
-                                    <p>Location: {applicant.location}</p>
-                                    <p>Qualifications: {applicant.qualifications}</p>
-                                    <p>Skills: {applicant.skills.join(', ')}</p>
-                                    <p>Experience: {applicant.experience}</p>
-                                    <p>Applied At: {new Date(applicant.appliedAt).toLocaleString()}</p>
+            <div className="view__applicants">
+                <h1>JOB APPLICANTS</h1>
+                <div>
+                    {applicantsData.length > 0 ? (
+                        <ul>
+                            {applicantsData.map(applicant => (
+                                <div className="card__container" key={applicant._id}>
+                                    <div>
+                                        <h2>{applicant.name}</h2>
+                                        <p>Email: {applicant.email}</p>
+                                        <p>Phone: {applicant.phone}</p>
+                                        <p>Location: {applicant.location}</p>
+                                        <p>Qualifications: {applicant.qualifications}</p>
+                                        <p>Skills: {applicant.skills.join(', ')}</p>
+                                        <p>Experience: {applicant.experience}</p>
+                                        <p>Applied At: {new Date(applicant.appliedAt).toLocaleString()}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </ul>
-                ) : (
-                    <p>No applicants available</p>
-                )}
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>No applicants available</p>
+                    )}
+                </div>
             </div>
         </>
     );

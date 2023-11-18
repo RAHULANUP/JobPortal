@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate,useParams } from 'react-router-dom';
-import axios from 'axios';
 import './Applyjob.css';
+
+import { Link,useNavigate,useParams } from 'react-router-dom';
+
+import axios from 'axios';
+
+import { IoIosArrowBack } from "react-icons/io";
 
 function Applyjob() {
     const {jobId} = useParams();
@@ -54,7 +58,10 @@ function Applyjob() {
             <div className="job__main_container">
                 <div className="post__job">
                     <form onSubmit={handleApplyJob}>
-                        <h1>APPLY JOB</h1>
+                        <div>
+                            <h1>APPLY JOB</h1>
+                            <Link to="/seeker" className='back__arrow'><IoIosArrowBack /></Link>
+                        </div>
                         <div>
                             <div>
                                 <input
@@ -110,7 +117,7 @@ function Applyjob() {
                                 />
                             </div>
                         </div>
-                        <div className="with__dropdown">
+                        <div>
                             <div>
                                 <input
                                     type="text"

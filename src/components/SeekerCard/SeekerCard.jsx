@@ -35,7 +35,7 @@ function SeekerCard({search}) {
               <p>{job.description}</p>
             </div>
             <div className='apply'>
-                <Link to={`/apply-job/${job._id}`}><button>Easy Apply</button></Link> 
+                <Link to={`/apply-job/${job._id}`}><button>Apply</button></Link> 
             </div>
           </div>
           ))}
