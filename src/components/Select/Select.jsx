@@ -1,13 +1,19 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Select.css";
 
 import { Link } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function Select(){
+    useEffect(()=>{
+        AOS.init();
+    })
     return(
         <>
             <div className="select__container">
-                <div className="recruiter">
+                <div className="recruiter" data-aos="flip-right">
                     <div>
                         <h1>RECRUITER</h1>
                     </div>
@@ -16,7 +22,7 @@ function Select(){
                     </Link>
                 
                 </div>
-                <div className="seeker">
+                <div className="seeker" data-aos="flip-left">
                     <div>
                         <h1>JOB SEEKER</h1>
                     </div>
