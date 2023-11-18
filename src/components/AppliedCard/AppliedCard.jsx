@@ -4,7 +4,6 @@ import "./AppliedCard.css";
 
 function AppliedCard() {
     const [jobData, setJobData] = useState([]);
-    const [search, setSearch] = useState('');
 
     useEffect(() => {
         const token = localStorage.getItem('token')
@@ -13,10 +12,10 @@ function AppliedCard() {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
-        } )
+        })
             .then(response => {
                 setJobData(response.data.data);
-                console.log("Applied Card",response.data.data);
+                console.log("Applied Card", response.data.data);
             })
             .catch(error => {
                 console.error('Error fetching applied jobs:', error);
@@ -26,15 +25,18 @@ function AppliedCard() {
     return (
         <>
             <div>
+                {console.log(jobData)}
                 {jobData.length > 0 ? (
                     <ul>
-                        {jobData.filter((job) => job.job.title.toLowerCase().includes(search.toLowerCase())).map(job => (
+                        {jobData.map(job => (
                             <div className="card__container" key={job._id}>
+                                {job.job &&
                                 <div>
                                     <h2>{job.job.title}</h2>
                                     <p>{job.job.company} - {job.job.location}</p>
                                     <p>{job.job.description}</p>
                                 </div>
+                                }
                             </div>
                         ))}
                     </ul>
