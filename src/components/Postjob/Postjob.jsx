@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import './Postjob.css';
+
+import { Link,useNavigate } from 'react-router-dom';
+
+import { IoIosArrowBack } from "react-icons/io";
+
+import axios from 'axios';
+
 
 function Postjob() {
     const [jobTitle, setJobTitle] = useState('');
@@ -60,7 +65,10 @@ function Postjob() {
             <div className="job__main_container">
                 <div className="post__job">
                     <form onSubmit={handleCreateJob}>
-                        <h1>CREATE JOB</h1>
+                        <div>
+                            <h1>CREATE JOB</h1>
+                            <Link className="back__arrow" to="/recruiter"><IoIosArrowBack /></Link>
+                        </div>
                         <div>
                             <div>
                                 <input

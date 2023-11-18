@@ -5,6 +5,10 @@
     justify-content:center;
     align-items:center;
 }
+.back__arrow{
+    font-size:2rem;
+    margin-bottom:1rem;
+}
 .update__job>form>div>div>input{
     margin-bottom:1rem;
     border:0.3px solid rgb(65,65,236);

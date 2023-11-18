@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import axios from 'axios';
 import './Updatejob.css';
+
+import { Link,useNavigate, useParams } from 'react-router-dom';
+
+import axios from 'axios';
+
+import { IoIosArrowBack } from "react-icons/io";
+
 
 function Updatejob() {
     const { jobId } = useParams();
@@ -84,7 +89,10 @@ function Updatejob() {
             <div className="job__main_container">
                 <div className="update__job">
                     <form onSubmit={handleUpdateJob}>
-                        <h1>UPDATE JOB</h1>
+                        <div>
+                            <h1>UPDATE JOB</h1>
+                            <Link className="back__arrow" to="/recruiter"><IoIosArrowBack /></Link> 
+                        </div>
                         <div>
                             <div>
                                 <input
