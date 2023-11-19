@@ -15,6 +15,10 @@ import Postjob from "./components/Postjob/Postjob";
 import Updatejob from "./components/Updatejob/Updatejob";
 import Applyjob from "./components/Applyjob/Applyjob";
 import ViewApplicants from "./components/ViewApplicants/ViewApplicants";
+
+import Admin from "./components/Admin/Admin";
+import AdminLogin from "./components/AdminLogin/AdminLogin";
+
 function App() {
   return (
     <>
@@ -33,7 +37,8 @@ function App() {
         <Route path='/updatejob/:jobId' element={<Updatejob/>} />
         <Route path='/apply-job/:jobId' element={<Applyjob/>} />
         <Route path="/viewapplicants/:jobId" element={<ViewApplicants/>} />
-      
+        <Route path='/admin' element={<Admin/>} />
+        <Route path='/adminlogin' element={<AdminLogin/>} />
       </Routes>
 
     </>

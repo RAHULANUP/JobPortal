@@ -1,5 +1,5 @@
 .select__container{
-    height:90vh;
+    height:83vh;
     display:flex;
     justify-content:space-around;
     align-items:center;
@@ -74,6 +74,14 @@ div > .recruiter , .seeker{
     color:rgb(0,0,0);
 }
 
+
+.admin__login{
+    width:2rem;
+    height:2rem;
+    border-radius:1rem;
+    font-size:2rem;
+    background-color:rgb(68, 68, 226);
+}
 @media all and (max-width:950px){
     div > .recruiter, .seeker{
         width:40%;

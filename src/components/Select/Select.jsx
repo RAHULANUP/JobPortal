@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { BsShieldLock } from "react-icons/bs";
+
 function Select(){
     useEffect(()=>{
         AOS.init();
@@ -31,6 +33,7 @@ function Select(){
                     </Link>
                 </div>
             </div>
+            <Link to="/adminlogin" className="admin__login"><div><BsShieldLock /></div></Link>
         </>
     );
 }
