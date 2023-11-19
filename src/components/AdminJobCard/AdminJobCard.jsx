@@ -1,7 +1,10 @@
 import React,{ useState , useEffect } from  "react";
 import "./AdminJobCard.css";
+
 import axios from "axios";
-import {Link} from  "react-router-dom";
+
+import { RiDeleteBinLine } from "react-icons/ri";
+
 function AdminJobCard() {
     const [jobData, setJobData] = useState([]);
     
@@ -22,6 +25,26 @@ function AdminJobCard() {
           console.error('Error fetching job data:', error);
         });
     }, [token]);
+    const deleteJob = async (jobId) => {
+      try {
+        const response = await axios.post(
+          `http://localhost:5000/api/admin/delete/${jobId}`,
+          null,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+  
+        if (response.status === 200) {
+          setJobData((prevJobData) => prevJobData.filter((job) => job._id !== jobId));
+          console.log(`Job with ID ${jobId} deleted successfully`);
+        }
+      } catch (error) {
+        console.error('Error deleting job:', error);
+      }
+    };
   return (
     <>
       {jobData.length > 0 ? (
@@ -34,7 +57,7 @@ function AdminJobCard() {
               <p>{job.description}</p>
             </div>
             <div className="delete">
-                <Link to={``}><button>Delete</button></Link> 
+                <button onClick={()=>deleteJob(job._id)}><RiDeleteBinLine /></button>
             </div>
           </div>
           ))}
