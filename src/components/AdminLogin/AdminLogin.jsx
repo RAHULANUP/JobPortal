@@ -14,11 +14,10 @@ function AdminLogin() {
         try {
             // Send POST request to the server
             const response = await axios.post(
-                "http://localhost:5000/api/user/signup",
+                "http://localhost:5000/api/user/login/",
                 {
                     email,
                     password,
-                    type: "admin",
                 }
             );
 
