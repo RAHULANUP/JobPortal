@@ -12,7 +12,7 @@ function ViewApplicants() {
         const token = localStorage.getItem('token');
 
         // Make a GET request to fetch applicants
-        axios.get(`http://localhost:5000/api/list-job/application/${jobId}`, {
+        axios.get(`https://dbms-jgsk.onrender.com/api/list-job/application/${jobId}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Postjob.css';
 
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { IoIosArrowBack } from "react-icons/io";
 
@@ -30,7 +30,7 @@ function Postjob() {
 
             // Send POST request to your API endpoint with the job details and headers
             const response = await axios.post(
-                'http://localhost:5000/api/list-job/create',
+                'https://dbms-jgsk.onrender.com/api/list-job/create',
                 {
                     title: jobTitle,
                     company,

@@ -17,7 +17,7 @@ function Signupseeker() {
         try {
             // Send POST request to the server
             const response = await axios.post(
-                "http://localhost:5000/api/user/signup",
+                "https://dbms-jgsk.onrender.com/api/user/signup",
                 {
                     username,
                     email,

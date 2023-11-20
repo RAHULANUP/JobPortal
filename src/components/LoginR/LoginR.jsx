@@ -9,14 +9,14 @@ function LoginR() {
 
     // Access the navigate function for programmatic navigation
     const navigate = useNavigate();
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             // Send POST request to the server for login
             const response = await axios.post(
-                "http://localhost:5000/api/user/login",
+                "https://dbms-jgsk.onrender.com/api/user/login",
                 {
                     email,
                     password,
@@ -27,7 +27,7 @@ function LoginR() {
             const token = response.data.token;
             // Save the token to local storage
             localStorage.setItem("token", token);
-            
+
             // Use navigate to redirect to /recruiter
             navigate("/recruiter");
         } catch (error) {

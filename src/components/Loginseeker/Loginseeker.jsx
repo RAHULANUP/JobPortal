@@ -16,7 +16,7 @@ function Loginseeker() {
         try {
             // Send POST request to the server for login
             const response = await axios.post(
-                "http://localhost:5000/api/user/login",
+                "https://dbms-jgsk.onrender.com/api/user/login",
                 {
                     email,
                     password,

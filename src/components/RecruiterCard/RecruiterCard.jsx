@@ -4,14 +4,14 @@ import axios from 'axios';
 import { FiTarget } from "react-icons/fi";
 import { GrUpdate } from "react-icons/gr";
 import { RiDeleteBinLine } from "react-icons/ri";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 function JobList() {
   const [jobData, setJobData] = useState([]);
   const token = localStorage.getItem('token');
 
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/list-job/', {
+    axios.get('https://dbms-jgsk.onrender.com/api/list-job/', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -29,7 +29,7 @@ function JobList() {
   const deleteJob = async (jobId) => {
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/list-job/delete/${jobId}`,
+        `https://dbms-jgsk.onrender.com/api/list-job/delete/${jobId}`,
         null,
         {
           headers: {
@@ -54,17 +54,17 @@ function JobList() {
         <ul>
           {jobData.map(job => (
             <div className="card__container" key={job._id}>
-            <div>
-              <h2>{job.title}</h2>
-              <p>{job.company} - {job.location}</p>
-              <p>{job.description}</p>
+              <div>
+                <h2>{job.title}</h2>
+                <p>{job.company} - {job.location}</p>
+                <p>{job.description}</p>
+              </div>
+              <div className='del__update'>
+                <Link to={`/viewapplicants/${job._id}`} ><button><FiTarget /></button></Link>
+                <Link to={`/updatejob/${job._id}`}><button><GrUpdate /></button></Link>
+                <button onClick={() => deleteJob(job._id)}><RiDeleteBinLine /></button>
+              </div>
             </div>
-            <div className='del__update'>
-                <Link to={`/viewapplicants/${job._id}`} ><button><FiTarget/></button></Link>
-              <Link to={`/updatejob/${job._id}`}><button><GrUpdate /></button></Link>
-              <button onClick={() => deleteJob(job._id)}><RiDeleteBinLine /></button>
-            </div>
-          </div>
           ))}
         </ul>
       ) : (

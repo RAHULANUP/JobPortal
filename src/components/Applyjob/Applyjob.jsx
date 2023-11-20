@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Applyjob.css';
 
-import { Link,useNavigate,useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import axios from 'axios';
 
 import { IoIosArrowBack } from "react-icons/io";
 
 function Applyjob() {
-    const {jobId} = useParams();
+    const { jobId } = useParams();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -22,11 +22,11 @@ function Applyjob() {
 
     const handleApplyJob = async (e) => {
         e.preventDefault();
-    
+
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                `http://localhost:5000/api/seeker/apply-job/${jobId}`, // Endpoint for applying to a job
+                `https://dbms-jgsk.onrender.com/api/seeker/apply-job/${jobId}`, // Endpoint for applying to a job
                 {
                     name,
                     email,
@@ -43,7 +43,7 @@ function Applyjob() {
                     },
                 }
             );
-    
+
             // Handle success - maybe redirect or show a success message
             console.log('Job Application Successful:', response.data);
             navigate("/seeker"); // Redirect after applying

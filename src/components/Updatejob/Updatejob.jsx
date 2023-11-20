@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Updatejob.css';
 
-import { Link,useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -25,7 +25,7 @@ function Updatejob() {
         const fetchJobDetails = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`http://localhost:5000/api/list-job/${jobId}`, {
+                const response = await axios.get(`https://dbms-jgsk.onrender.com/api/list-job/${jobId}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 const jobDetails = response.data.data;
@@ -56,7 +56,7 @@ function Updatejob() {
 
             // Send POST request to update the job
             const response = await axios.post(
-                `http://localhost:5000/api/list-job/edit/${jobId}`,
+                `https://dbms-jgsk.onrender.com/api/list-job/edit/${jobId}`,
                 {
                     title: jobTitle,
                     company,
@@ -91,7 +91,7 @@ function Updatejob() {
                     <form onSubmit={handleUpdateJob}>
                         <div>
                             <h1>UPDATE JOB</h1>
-                            <Link className="back__arrow" to="/recruiter"><IoIosArrowBack /></Link> 
+                            <Link className="back__arrow" to="/recruiter"><IoIosArrowBack /></Link>
                         </div>
                         <div>
                             <div>

@@ -8,7 +8,7 @@ function AppliedCard() {
     useEffect(() => {
         const token = localStorage.getItem('token')
         // Make a GET request to fetch applied jobs
-        axios.get('http://localhost:5000/api/seeker/applied-jobs', {
+        axios.get('https://dbms-jgsk.onrender.com/api/seeker/applied-jobs', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -31,11 +31,11 @@ function AppliedCard() {
                         {jobData.map(job => (
                             <div className="card__container" key={job._id}>
                                 {job.job &&
-                                <div>
-                                    <h2>{job.job.title}</h2>
-                                    <p>{job.job.company} - {job.job.location}</p>
-                                    <p>{job.job.description}</p>
-                                </div>
+                                    <div>
+                                        <h2>{job.job.title}</h2>
+                                        <p>{job.job.company} - {job.job.location}</p>
+                                        <p>{job.job.description}</p>
+                                    </div>
                                 }
                             </div>
                         ))}

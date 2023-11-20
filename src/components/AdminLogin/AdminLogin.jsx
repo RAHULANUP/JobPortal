@@ -4,8 +4,8 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 function AdminLogin() {
-    const [email,setEmail]  = useState("");
-    const  [password,setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -14,7 +14,7 @@ function AdminLogin() {
         try {
             // Send POST request to the server
             const response = await axios.post(
-                "http://localhost:5000/api/user/login/",
+                "https://dbms-jgsk.onrender.com/api/user/login/",
                 {
                     email,
                     password,
@@ -32,40 +32,40 @@ function AdminLogin() {
             console.error("Error:", error);
         }
     };
-  return (
-    <>
-    <form onSubmit={handleSubmit}>
-        <div className="box">
-            <div className="login_container">
-                <div className="content">
-                    <div>
-                        <h1>ADMIN</h1>
-                    </div>
-                    <div>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <button type="submit">LOGIN</button>
+    return (
+        <>
+            <form onSubmit={handleSubmit}>
+                <div className="box">
+                    <div className="login_container">
+                        <div className="content">
+                            <div>
+                                <h1>ADMIN</h1>
+                            </div>
+                            <div>
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <button type="submit">LOGIN</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </form>
-    </>
-  )
+            </form>
+        </>
+    )
 }
 
 export default AdminLogin;
