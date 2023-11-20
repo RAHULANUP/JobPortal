@@ -35,7 +35,6 @@ function Applyjob() {
                     qualifications,
                     skills: skills.split(','), // Convert skills to an array
                     experience,
-                    salary,
                 },
                 {
                     headers: {
@@ -118,14 +117,6 @@ function Applyjob() {
                             </div>
                         </div>
                         <div>
-                            <div>
-                                <input
-                                    type="text"
-                                    placeholder="SALARY"
-                                    value={salary}
-                                    onChange={(e) => setSalary(e.target.value)}
-                                />
-                            </div>
                             <div>
                                 <input
                                     type="text"
