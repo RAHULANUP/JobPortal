@@ -16,7 +16,6 @@ function Applyjob() {
     const [qualifications, setQualifications] = useState('');
     const [skills, setSkills] = useState('');
     const [experience, setExperience] = useState('');
-    const [salary, setSalary] = useState('');
     const navigate = useNavigate();
 
 
@@ -116,7 +115,7 @@ function Applyjob() {
                                 />
                             </div>
                         </div>
-                        <div>
+                        <div className="experience">
                             <div>
                                 <input
                                     type="text"

@@ -38,26 +38,37 @@
     overflow-y:scroll;
 }
 
-@media all and (max-width:600px){
-    .section__recruiter{
-        height:50vh;
-        display:flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
+@media all and (max-width: 600px) {
+    .section__recruiter {
+      height: auto; /* Let the height adjust as needed */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Align content at the top */
+      align-items: center;
     }
-    .recruiter__post{
-        width:65%;
-        margin-bottom:2rem;
-        border-right:none;
-        border-bottom:3px solid rgb(0,0,0);
-        display:flex;
-        flex-direction:row;
-        justify-content: space-around;
-        align-items:center;
-
+  
+    .recruiter__post {
+      width: 90%; 
+      height:25vh;
+      border: none; 
+      border-bottom: 3px solid rgb(0, 0, 0);
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center;
     }
-    .recruiter__post>a>button{
-        margin-top:10rem;
+  
+    .recruiter__post > a > button {
+      margin: 2rem 0; 
     }
-}
+  
+    .recruiter__job {
+      width: 100%; 
+      height: 65vh;
+      overflow-y: scroll;
+    }
+    .recruiter__job::-webkit-scrollbar{
+        width:0;
+    }
+  }
+  

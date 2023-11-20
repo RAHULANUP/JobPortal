@@ -60,9 +60,9 @@ function JobList() {
                 <p>{job.description}</p>
               </div>
               <div className='del__update'>
-                <Link to={`/viewapplicants/${job._id}`} ><button><FiTarget /></button></Link>
-                <Link to={`/updatejob/${job._id}`}><button><GrUpdate /></button></Link>
-                <button onClick={() => deleteJob(job._id)}><RiDeleteBinLine /></button>
+                <Link to={`/viewapplicants/${job._id}`} ><FiTarget /></Link>
+                <Link to={`/updatejob/${job._id}`}><GrUpdate /></Link>
+                <button className='delete' onClick={() => deleteJob(job._id)}><RiDeleteBinLine /></button>
               </div>
             </div>
           ))}

@@ -7,10 +7,7 @@ function Navbar(){
     return(
         <>
             <nav className="navbar">
-                <Link to='/' className='logo'>jobPortal</Link>
-                <Link to='/usersignin' className='login'>
-                    <div>Get Started</div>
-                </Link>
+                <Link to='/' className='logo'>HireEz</Link>
             </nav>
         </>
     );

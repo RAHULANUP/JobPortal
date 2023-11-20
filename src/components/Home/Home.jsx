@@ -15,8 +15,8 @@ function Home(){
         <>
             <div className='home_page'>
                 <div>
-                    <h1>FIND YOUR DREAM JOB </h1>
-                    <h1>FASTER</h1>
+                    <h1 data-aos="fade-down" data-aos-duration="300">FIND YOUR DREAM JOB </h1>
+                    <h1 data-aos="fade-down" data-aos-delay="500">FASTER</h1>
                     <div className='button' data-aos='fade-left' data-aos-duration="1000" data-aos-delay="300">
                         <Link to='/select' className='getstarted'>GET STARTED</Link>
                     </div>

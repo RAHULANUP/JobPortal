@@ -45,6 +45,7 @@ button:hover{
     background-color:rgb(65,65,236);
     color:rgb(255, 255, 255);
     transition:0.3s all;
+    padding:0;
 }
 .box>.signup_container>.content>div>.button:hover{
     color:rgb(65,65,236);
@@ -56,6 +57,7 @@ input{
     height:2rem;
     font-size:1.2rem;
     border-radius:0.8rem;
+    padding:1.2rem;
 }
 .content div h1{
     text-align:center;
