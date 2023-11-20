@@ -1,6 +1,6 @@
 # HOSTING
 
-HOSTING URL : [https://jobzz.netlify.app](https://jobzz.netlify.app)
+HOSTING URL : [https://ourjobportal.netlify.app](https://ourjobportal.netlify.app)
 
 # Getting Started with Create React App
 
