@@ -14,7 +14,7 @@ function AdminLogin() {
         try {
             // Send POST request to the server
             const response = await axios.post(
-                "https://dbms-jgsk.onrender.com/api/user/login/",
+                "https://dbms-jgsk.onrender.com/api/seeker/login/",
                 {
                     email,
                     password,

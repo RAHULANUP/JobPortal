@@ -18,7 +18,7 @@ function Signup() {
 
     try {
       const response = await axios.post(
-        "https://dbms-jgsk.onrender.com/api/user/signup",
+        "https://dbms-jgsk.onrender.com/api/company/signup",
         {
           username,
           email,

@@ -16,7 +16,7 @@ function LoginR() {
         try {
             // Send POST request to the server for login
             const response = await axios.post(
-                "https://dbms-jgsk.onrender.com/api/user/login",
+                "https://dbms-jgsk.onrender.com/api/company/login",
                 {
                     email,
                     password,
