@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Loginseeker.css";
+ 
+import {toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Loginseeker() {
     const [email, setEmail] = useState("");
@@ -27,10 +30,10 @@ function Loginseeker() {
             const token = response.data.token;
             // Save the token to local storage
             localStorage.setItem("token", token);
-
+            toast.success("Successful");
             navigate("/seeker");
         } catch (error) {
-            // Handle error - show an error message or do something else
+            toast.error("Invalid Credentials");
             console.error("Login Error:", error);
         }
     };

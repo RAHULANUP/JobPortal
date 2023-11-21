@@ -5,6 +5,8 @@
 .seeker__main>.seeker__left>input{
     margin:1.5rem 0;
     width:90%;
+    border-radius:5px;
+    border-bottom:1.5px solid rgb(138, 134, 134);
 }
 div>h1{
     margin-bottom:1.5rem

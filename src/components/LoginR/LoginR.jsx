@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import axios from "axios";
+
 import "./LoginR.css";
+
+import {toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function LoginR() {
     const [email, setEmail] = useState("");
@@ -27,11 +32,12 @@ function LoginR() {
             const token = response.data.token;
             // Save the token to local storage
             localStorage.setItem("token", token);
-
+            toast.success("Successful");
             // Use navigate to redirect to /recruiter
             navigate("/recruiter");
         } catch (error) {
             // Handle error - show an error message or do something else
+            toast.error("Invalid Credentials");
             console.error("Login Error:", error);
         }
     };

@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes,Route } from "react-router-dom";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
@@ -24,6 +26,7 @@ function App() {
     <>
 
       <Navbar/>
+      <ToastContainer/>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/loginR' element={<LoginR/>} />

@@ -15,7 +15,7 @@ function Recruiter() {
     <>
         <div className="section__recruiter">
             <div className="recruiter__post" data-aos="fade-right">
-                <Link to="/postjob"><button>POST JOB</button></Link>
+                <Link to="/postjob"><button>NEW JOB</button></Link>
             </div>
             <div className="recruiter__job">
                 <div className="jobs__container">

@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import "./SignupR.css";
 import { Link } from "react-router-dom";
-import axios from "axios"; // Import Axios
+
+import axios from "axios";
+
+import {toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -29,12 +34,12 @@ function Signup() {
       const token = response.data.token;
       // Save the token to local storage
       localStorage.setItem("token", token);
-
+      toast.success("Successful")
       // Use navigate to redirect to /recruiter
       navigate("/recruiter");
 
     } catch (error) {
-      // Handle error - show an error message or do something else
+      toast.error("Invalid Credentials");
       console.error("Error:", error);
     }
   };

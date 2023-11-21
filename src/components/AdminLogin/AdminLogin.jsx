@@ -3,6 +3,9 @@ import "./AdminLogin.css";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
+import {toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function AdminLogin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -24,11 +27,11 @@ function AdminLogin() {
             const token = response.data.token;
             // Save the token to local storage
             localStorage.setItem("token", token);
-
+            toast.success("Successful");
             navigate("/admin");
 
         } catch (error) {
-            // Handle error - show an error message or do something else
+            toast.error("Invalid Credentials");
             console.error("Error:", error);
         }
     };

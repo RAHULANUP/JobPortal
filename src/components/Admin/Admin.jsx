@@ -8,15 +8,13 @@ function Admin(){
     return(
         <>
             <div className="admin__container">
-                <div className='admin__top'>
-                    <h1>USERS</h1>
-                    <h1>JOBS</h1>
-                </div>
-                <div className="admin__bottom">
-                    <div className='adminb__left'>
+                <div className="admin">
+                    <div className='admin__left'>
+                        <h1>USERS</h1>
                         <AdminUserCard/>
                     </div>
-                    <div className='adminb__right'>
+                    <div className='admin__right'>
+                        <h1>JOBS</h1>
                         <AdminJobCard/>
                     </div>
                 </div>
